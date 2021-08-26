@@ -1,13 +1,162 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;600&display=swap');
+
+* {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: 'Work Sans', sans-serif;
+}
+
+.app {
+  background: rgb(255,232,216);
+  background: linear-gradient(195deg, rgba(255,232,216,1) 21%, rgba(255,230,230,1) 64%);
+  position: static;
+  z-index: -2;
+}
+
+.greeting-card {
+  position: absolute;
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 25px;
+  border: 1px solid rgba( 255, 255, 255, 0.7);
+  width: 300px;
+  height: 160px;
+  text-align: center;
+  margin: auto;
+  padding: 15px;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
+#greeting {
+  font-size: 2.5rem;
+  color: rgb(73, 89, 156);
+  margin: 20px 0px;
+}
+
+/* .background-img {
+  background-image: url('./assets/images/rainy-day.jpg');
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  transition: 0.4s ease;
+  z-index: -1;
+} */
+
+.app.rainy {
+  /* gradient for rainy weather */
+  /* blue and grey */
+  background: rgb(152,184,199);
+  background: linear-gradient(208deg, rgba(152,184,199,1) 29%, rgba(203,231,241,1) 64%);
+}
+
+.app.sunny {
+  /* gradient for sunny weather */
+  /* pink and yellow version */
+  background: rgb(255,254,224);
+  background: linear-gradient(208deg, rgba(255,254,224,1) 28%, rgba(241,232,203,1) 69%);
+
+  /*blue and yellow version*/
+  background: rgb(255,254,224);
+  background: linear-gradient(204deg, rgba(255,254,224,1) 29%, rgba(203,231,241,1) 64%);
+}
+
+.app.cloudy {
+  /* gradient for cloudy weather */
+  /* blueish grey and grey */
+  background: rgb(152,173,199);
+  background: linear-gradient(208deg, rgba(152,173,199,1) 29%, rgba(203,228,241,1) 64%);
+}
+
+.sun-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.sun {
+  height: 300px;
+  width: 300px;
+  background-color: rgb(252, 199, 101);
+  border-radius: 50%;
+  position: fixed;
+  top: -150px;
+  z-index: 1;
+}
+
+main {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.05), rgba(0,0,0,0.1));
+  padding: 25px;
+  position: static;
+  z-index: -2;
+  /* backdrop-filter: blur(5px); */
+}
+
+.search-box {
+  width: 100%;
+  margin: 0 0 75px;
+  position: relative;
+  z-index: 2;
+}
+
+.search-box .search-bar {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  padding: 15px;
+  /* Reset search box appearance */
+  appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+
+  background-color: white;
+  color: #383636;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+.weather-box {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  margin: 30px auto;
+  /* background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1) ); */
+  padding: 15px 20px;
+  /* border: 2px solid rgba(255, 255, 255, 0.2); */
+  /* border-radius: 15px; */
+}
+
+.weather-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.current-temp {
+  color: white;
+  font-size: 100px;
+}
+
+.current-weather {
+  font-size: 30px;
+  color: white;
+  margin: 10px;
+}
+
+.weather-icon {
+  color: white;
+  font-size: 50px;
+  margin: 10px;
+}
+
+.location, .date {
+  font-size: 15px;
+  color: white;
 }
