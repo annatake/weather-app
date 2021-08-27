@@ -8,7 +8,7 @@ function Greeting() {
   let [hour, minutes, ampm] = useCurrentTime();
   let greeting = "Hello";
 
-  if (ampm === "am" && hour >= 5) {
+  if (ampm === "am" && hour >= 5 && hour !== 12) {
     greeting = "Good Morning";
 
   } else if (ampm === "pm") {

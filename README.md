@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# Weather React App
+
+A simple weather app that displays the current weather and temperature of any location.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
