@@ -1,6 +1,12 @@
 # Weather React App
 
-A simple weather app that displays the current weather and temperature of any location.
+A simple weather app that displays the current weather and temperature of a given location, using the OpenWeatherMap API.
+
+### Skills I learned
+* Using custom react hooks with useState and useEffect
+* Handling API calls
+* Writing unit tests with Jest and Testing Library
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
