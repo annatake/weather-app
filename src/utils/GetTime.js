@@ -7,7 +7,7 @@ export default function useCurrentTime() {
     useEffect(() => {
       const timer = setInterval(() => {
         setTime(new Date());
-      }, 1000);
+      }, 10000); // set our time state every 10000ms (10s)
       return () => {
         clearInterval(timer);
       }

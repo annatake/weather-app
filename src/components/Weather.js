@@ -19,7 +19,7 @@ function Weather() {
   
 
   return(
-      <main>
+      <main data-testid="weather-component">
         <div className="search-box">
           <input type="text" className="search-bar" placeholder="Search..." 
             onKeyPress={search} 
@@ -32,7 +32,7 @@ function Weather() {
             <>
               <div className="current-temp">{Math.round(weather.main.temp)}°c</div>
               <div className="weather-container">
-                <div className="icon-container"><img id="weather-icon" src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}/></div>
+                <div className="icon-container"><img id="weather-icon" alt="icon representing the current weather" src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}/></div>
                 <div className="current-weather">{weather.weather[0].main}</div>
               </div>
 

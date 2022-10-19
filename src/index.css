@@ -22,7 +22,6 @@ body {
   border-radius: 25px;
   border: 2px solid rgba( 255, 255, 255, 1);
   width: 300px;
-  height: 160px;
   text-align: center;
   margin: auto;
   padding: 15px;
@@ -35,6 +34,11 @@ body {
 #greeting {
   font-size: 2.5rem;
   margin: 20px 0px;
+}
+
+.date-time {
+  font-size: 16px;
+  margin: 10px 0;
 }
 
 /* .background-img {
@@ -140,21 +144,21 @@ main {
 
 .current-temp {
   color: white;
-  font-size: 90px;
-  height: 90px;
+  font-size: 4rem;
 }
 
 .current-weather {
-  font-size: 45px;
+  font-size: 2.75rem;
   color: white;
-  margin-bottom: 15px;
+  margin: -10px 0 15px 0;
 }
 
 .icon-container {
-  height: 100px;
+  height: 95px;
 }
 
 #weather-icon {
+  margin: -20px 0;
   width: 120px;
 }
 

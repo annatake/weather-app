@@ -1,14 +1,12 @@
 import React from 'react';
-import useCurrentDate from '../utils/GetDate';
-import useCurrentTime from '../utils/GetTime';
 
+function Greeting(props) {
 
-function Greeting() {
-  let [day, date, month] = useCurrentDate();
-  let [hour, minutes, ampm] = useCurrentTime();
-  let greeting = "Hello";
+  let [day, date, month] = props.currentDate;
+  let [hour, minutes, ampm] = props.currentTime;
+  let greeting = "Hello!";
 
-  if (ampm === "am" && hour >= 5 && hour !== 12) {
+  if (ampm === "am" && hour >= 5 && hour < 12) {
     greeting = "Good Morning";
 
   } else if (ampm === "pm") {
@@ -22,9 +20,9 @@ function Greeting() {
   }
   
   return(
-    <div className="greeting-card">
+    <div className="greeting-card" data-testid="greeting-card">
       <div id="greeting">{greeting}</div>
-      {day} | {month} {date} | {hour}:{minutes}{ampm}
+      <p className="date-time">{day} | {month} {date} | {hour}:{minutes}{ampm}</p>
     </div>
   );
 }
