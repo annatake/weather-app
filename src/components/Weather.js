@@ -8,16 +8,19 @@ function Weather() {
   const search = e => {
     if (e.key === "Enter") {
       fetch(`${process.env.REACT_APP_WEATHER_API_URL}/weather?q=${query}&units=metric&APPID=${process.env.REACT_APP_WEATHER_API_KEY}`)
-      .then(res => res.json())
+      .then(response => response.json())
       .then(result => {
-        setWeather(result);
-        setQuery('');
-        console.log(result);
+        if (result.cod === "200"){
+          setWeather(result);
+          setQuery('');
+          console.log(result);
+        } else {
+          console.log("The city entered does not exist.")
+        }
       });
     }
   }
   
-
   return(
       <main data-testid="weather-component">
         <div className="search-box">
